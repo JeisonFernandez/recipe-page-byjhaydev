@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Outfit", sans-serif; */
+}
+
+:root {
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-bharcoal: hsl(24, 5%, 18%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  background: var(--eggshell);
+  font-family: "Young Serif", serif;
+}
+
+p {
+  font-size: 16px;
+}
+
+.articulo {
+  background: var(--white);
+  padding: 2.5rem;
+  width: 60vw;
+  border-radius: 1.2rem;
+
+  > img {
+    width: 100%;
+    border-radius: 0.7rem;
+  }
+
+  > .header-article {
+    > h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      margin: 1.6rem 0 1rem;
+      color: var(--dark-bharcoal);
+    }
+
+    > p {
+      color: var(--wenge-brown);
+      font-family: "Outfit", sans-serif;
+    }
+
+    > .box-list {
+      background: var(--rose-white);
+      border-radius: 0.7rem;
+      padding: 2rem;
+      margin: 2rem 0;
+      font-family: "Outfit", sans-serif;
+
+      > h3 {
+        color: var(--dark-raspberry);
+      }
+
+      > ul {
+        list-style: none;
+        color: var(--wenge-brown);
+        padding-left: 10px;
+        font-family: "Outfit", sans-serif;
+        margin-top: .5rem;
+
+        > li {
+          display: flex;
+          align-items: center;
+        }
+        
+        > li strong {
+          flex-wrap: wrap;
+        }
+
+        > li strong span{
+          font-weight: 400;
+        }
+
+        > li::before {
+          content: "·";
+          font-size: 35px;
+          margin-right: 19px;
+        }
+      }
+    }
+  }
+
+  .body-article {
+    > h2 {
+      color: var(--nutmeg);
+      font-weight: 400;
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+    }
+
+    > h2:nth-of-type(2) {
+      margin-bottom: 2rem;
+    }
+
+    > ul {
+      list-style: none;
+      padding-left: 10px;
+      font-family: "Outfit", sans-serif;
+      color: var(--wenge-brown);
+      margin: 0 0 2rem;
+
+      > li {
+        display: flex;
+        align-items: center;
+      }
+
+      > li::before {
+        content: "·";
+        font-size: 35px;
+        color: var(--nutmeg);
+        margin: 0;
+        margin-right: 27px;
+      }
+    }
+
+    > hr {
+      border: 0;
+      border-bottom: 01px solid var(--light-grey);
+      margin-bottom: 2rem;
+    }
+
+    > ol {
+      margin: 0 0 2rem 1.5rem;
+      color: var(--wenge-brown);
+      font-family: "Outfit", sans-serif;
+
+      > li {
+        padding-left: 20px;
+        margin: 0 0 10px;
+      }
+
+      > li::marker {
+        font-weight: 800;
+      }
+    }
+  }
+
+  > .footer-article {
+    > h2 {
+      color: var(--nutmeg);
+      font-weight: 400;
+      font-size: 1.7rem;
+    }
+
+    > hr {
+      border: 0;
+      border-bottom: 01px solid var(--light-grey);
+      margin-bottom: 1.5rem;
+    }
+
+    > p {
+      color: var(--nutmeg);
+      font-family: "Outfit", sans-serif;
+      margin: 1rem 0;
+    }
+
+    > table {
+      width: 100%;
+      text-align: left;
+      border-collapse: collapse;
+      caption-side: top;
+      font-family: "Outfit", sans-serif;
+
+      > th,
+      td,
+      tr {
+        border-bottom: 1px solid var(--light-grey);
+        padding: 0.7rem 0 1rem;
+        color: var(--wenge-brown);
+      }
+
+      > th:last-child,
+      td:last-child,
+      tr:last-child {
+        border: 0;
+      }
+
+      > tr,
+      th {
+        font-weight: 400;
+        padding-left: 1.5rem;
+      }
+
+      > tr,
+      td {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media (max-width: 567px) {
+  body {
+    padding: 0;
+  }
+
+  .articulo {
+    width: 100vw;
+    padding: 0;
+
+    > img {
+      border-radius: 0;
+    }
+
+    > section {
+      padding: 0 2rem 1.5rem;
+    }
+
+    > .header-article{
+
+      > h1 {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+
+      > .box-list {
+        > ul {
+          padding-top: .5rem;
+        }
+      }
+
+    }
+
+  }
+
+  
+}
